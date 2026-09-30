@@ -40,31 +40,18 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 
 
-## SaaS/Hosted Platforms
-
-
-
-- **[BuyDRM, EZDRM, PallyCon, Axinom, ExpressPlay](https://www.buydrm.com/)**  
-
-  Multi-DRM license services and packaging platforms supporting Widevine, PlayReady, FairPlay, and related ecosystems.
-
-
-
-- **[Verimatrix, NAGRA, Irdeto](https://www.verimatrix.com/)**  
-
-  Enterprise content protection and security platforms for operators and premium OTT services.
-
-
-
-- **[CastLabs, Vualto](https://castlabs.com/)**  
-
-  DRM, packaging, and player solutions for secure streaming workflows.
-
-
-
-- **[Other commercial multi-DRM platforms](https://www.buydrm.com/)**  
-
-  Additional license proxy, watermarking, and anti-piracy services.
+| Platform | Description | Starting Price | Free Tier / Trial Limit |
+| --- | --- | --- | --- |
+| **[BuyDRM](https://www.buydrm.com/)** | Multi-DRM (KeyOS) license platform for Widevine, PlayReady, and FairPlay. | $99/month (entry pool tier) | No self-service free tier/trial (demo via sales consultation) |
+| **[EZDRM](https://www.ezdrm.com/)** | Hosted Multi-DRM offering Clear Key, single DRM, and Universal DRM plans. | $49.99/month (AES Clear Key, 10k licenses) / $99.99/month (Single DRM) | 30-day free Proof of Concept (POC) trial with 1,000 free licenses |
+| **[PallyCon](https://pallycon.com/)** | Cloud-based Multi-DRM license service and forensic watermarking for OTT. | $299/month (Standard plan, includes up to 20,000 licenses) | 30-day free trial period for integration testing |
+| **[Axinom DRM](https://www.axinom.com/)** | Pay-as-you-go Multi-DRM service built on Axinom Mosaic platform. | Metered usage based on monthly license consumption | 60-day free trial with 2 free development environments |
+| **[ExpressPlay](https://www.expressplay.com/)** | Intertrust Multi-DRM platform supporting PlayReady, Widevine, FairPlay, and Marlin. | Custom enterprise quotes / volume licensing | 90-day free developer evaluation trial |
+| **[CastLabs (DRMtoday)](https://castlabs.com/)** | Multi-DRM licensing, encoding, packaging, and player infrastructure. | $299/month (Starter plan, includes first 20,000 license requests) | Free trial including first 1,000 free license requests (no credit card required) |
+| **[Vualto (JW Player Studio DRM)](https://vualto.com/)** | Enterprise DRM and packaging pipeline integrated into JW Player OTT stack. | Custom enterprise subscription quote | Custom evaluation demo upon request |
+| **[Verimatrix](https://www.verimatrix.com/)** | Streamkeeper Multi-DRM and enterprise end-to-end content protection platform. | Elastic usage-based enterprise tier pricing | Evaluation trial environment available upon sales consultation |
+| **[NAGRA](https://lab.nagra.com/)** | Security and Multi-DRM platform for premium broadcast and OTT services. | $850/month (AWS Marketplace Base Plan, includes first 100,000 licenses) | 30-day free trial limited to 1,000 licenses |
+| **[Irdeto](https://irdeto.com/)** | Enterprise content security, DRM Control, and piracy control ecosystem. | Custom enterprise quote based on service scope & traffic volume | Tailored pilot evaluation upon request |
 
 
 
