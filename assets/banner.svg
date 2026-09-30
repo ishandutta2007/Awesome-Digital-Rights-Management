@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0a0c10"/>
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="100%" stop-color="#1f6feb"/>
+    </linearGradient>
+
+    <linearGradient id="accent-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bc8cff"/>
+      <stop offset="100%" stop-color="#8957e5"/>
+    </linearGradient>
+
+    <linearGradient id="glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#388bfd" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8957e5" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Filter for Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 46px; fill: #ffffff; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 20px; fill: #8b949e; }
+    .badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 13px; fill: #58a6ff; }
+    
+    /* Dynamic Floating Animations in Background */
+    @keyframes float1 {
+      0% { transform: translate(0px, 0px) rotate(0deg); }
+      50% { transform: translate(-15px, 20px) rotate(3deg); }
+      100% { transform: translate(0px, 0px) rotate(0deg); }
+    }
+    @keyframes float2 {
+      0% { transform: translate(0px, 0px) rotate(0deg); }
+      50% { transform: translate(20px, -15px) rotate(-4deg); }
+      100% { transform: translate(0px, 0px) rotate(0deg); }
+    }
+    @keyframes pulse {
+      0% { opacity: 0.3; transform: scale(0.98); }
+      50% { opacity: 0.7; transform: scale(1.02); }
+      100% { opacity: 0.3; transform: scale(0.98); }
+    }
+
+    .bg-element-1 { animation: float1 8s ease-in-out infinite; transform-origin: center; }
+    .bg-element-2 { animation: float2 10s ease-in-out infinite; transform-origin: center; }
+    .pulse-glow { animation: pulse 6s ease-in-out infinite; transform-origin: center; }
+  </style>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="300" rx="16" fill="url(#bg-grad)" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Background Dynamic Mesh & Glows (Behind Text) -->
+  <g class="pulse-glow" opacity="0.4">
+    <circle cx="150" cy="80" r="140" fill="url(#glow-grad)"/>
+    <circle cx="1050" cy="220" r="160" fill="url(#glow-grad)"/>
+  </g>
+
+  <!-- Decorative Floating Background Graphic Elements (Right side, non-overlapping) -->
+  <g class="bg-element-1" opacity="0.85">
+    <!-- Key / Shield Graphic Motif -->
+    <rect x="860" y="55" width="260" height="190" rx="12" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+    <rect x="880" y="80" width="220" height="32" rx="6" fill="#21262d"/>
+    <circle cx="900" cy="96" r="6" fill="#f85149"/>
+    <circle cx="918" cy="96" r="6" fill="#e3b341"/>
+    <circle cx="936" cy="96" r="6" fill="#2ea043"/>
+    
+    <!-- Code/Structure Simulation lines -->
+    <rect x="880" y="130" width="140" height="10" rx="4" fill="#58a6ff" opacity="0.8"/>
+    <rect x="880" y="150" width="180" height="10" rx="4" fill="#30363d"/>
+    <rect x="880" y="170" width="110" height="10" rx="4" fill="#30363d"/>
+    <rect x="880" y="190" width="150" height="10" rx="4" fill="#bc8cff" opacity="0.7"/>
+  </g>
+
+  <g class="bg-element-2" opacity="0.9">
+    <!-- Floating Lock / DRM Protection Shield -->
+    <g transform="translate(780, 110)">
+      <path d="M40 0 L80 20 V60 C80 90 40 110 40 110 C40 110 0 90 0 60 V20 Z" fill="url(#accent-purple)" filter="url(#glow)"/>
+      <path d="M40 5 L75 23 V58 C75 84 40 102 40 102 C40 102 5 84 5 58 V23 Z" fill="#161b22"/>
+      <!-- Lock Keyhole -->
+      <circle cx="40" cy="48" r="8" fill="#58a6ff"/>
+      <rect x="37" y="52" width="6" height="16" rx="2" fill="#58a6ff"/>
+    </g>
+  </g>
+
+  <!-- Main Content Foreground (Guaranteed Text Visibility) -->
+  <g transform="translate(60, 0)">
+    <!-- Category Tag / Badge -->
+    <g transform="translate(0, 50)">
+      <rect width="250" height="30" rx="15" fill="#1f6feb" fill-opacity="0.2" stroke="#58a6ff" stroke-opacity="0.4" stroke-width="1"/>
+      <text x="125" y="20" text-anchor="middle" class="badge-text">🔒 MULTI-DRM &amp; CONTENT SECURITY</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="135" class="title">Awesome Digital Rights Management</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="178" class="subtitle">Curated Multi-DRM Ecosystem, SaaS Providers &amp; Open-Source Tooling</text>
+
+    <!-- Tech Pills -->
+    <g transform="translate(0, 215)">
+      <!-- Pill 1: Widevine -->
+      <rect x="0" y="0" width="110" height="28" rx="6" fill="#21262d" stroke="#30363d"/>
+      <text x="55" y="18" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#e6edf3">Widevine</text>
+
+      <!-- Pill 2: FairPlay -->
+      <rect x="120" y="0" width="100" height="28" rx="6" fill="#21262d" stroke="#30363d"/>
+      <text x="170" y="18" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#e6edf3">FairPlay</text>
+
+      <!-- Pill 3: PlayReady -->
+      <rect x="230" y="0" width="110" height="28" rx="6" fill="#21262d" stroke="#30363d"/>
+      <text x="285" y="18" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#e6edf3">PlayReady</text>
+
+      <!-- Pill 4: CENC / OTT -->
+      <rect x="350" y="0" width="130" height="28" rx="6" fill="#21262d" stroke="#30363d"/>
+      <text x="415" y="18" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#e6edf3">CENC / DASH / HLS</text>
+    </g>
+  </g>
+</svg>
